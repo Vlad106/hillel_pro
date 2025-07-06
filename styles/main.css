@@ -1,0 +1,9 @@
+body.dark {
+    background-color: #111;
+    color: #fff;
+}
+
+body.dark button {
+    background-color: #5e5e5e;
+    color: #fff;
+}
