@@ -1,0 +1,24 @@
+import { people } from "../assets/Scientist.jsx"
+import { getImageUrl2} from "../assets/Scientist.jsx";
+
+export default function List() {
+    const listItems = people.map(person =>
+        <li key={person.id}>
+            <img
+                src={getImageUrl2(person)}
+                alt={person.name}
+            />
+            <p>
+                <b>{person.name}:</b>
+                {' ' + person.profession + ' '}
+                known for {person.accomplishment}
+            </p>
+        </li>
+    );
+    return (
+        <article>
+            <h1>Scientists</h1>
+            <ul>{listItems}</ul>
+        </article>
+    );
+}
