@@ -1,12 +1,24 @@
 function TodoItem({ todo, toggleTodo }) {
     return (
         <li
-            onClick={() => toggleTodo(todo.id)}
-            style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+            style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                marginBottom: "6px",
+            }}
         >
-            {todo.text}
+            <input
+                type="checkbox"
+                checked={todo.completed}
+                onChange={() => toggleTodo(todo.id)}
+            />
+            <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+        {todo.text}
+      </span>
         </li>
     );
 }
 
 export default TodoItem;
+

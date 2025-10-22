@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 function TodoForm({ addTodo }) {
-    const [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (inputValue.trim() === '') return;
+        if (inputValue.trim() === "") return;
         addTodo(inputValue);
-        setInputValue('');
+        setInputValue("");
     };
 
     return (
